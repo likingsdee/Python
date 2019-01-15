@@ -4,7 +4,18 @@
 """
 # 定义一个空类
 class Student():
-    pass
+    name = None
+    age = 16
+    __littleName = None
+    def say(self):
+        self.name = "xingchen"
+        self.age = 22
+        print("My name is {0}".format(self.name))
+        print("My age is {0}".format(self.age))
+        return None
+    def sayAgain():
+        print("{0}".format(__class__.name))
+
 
 # 实例化一个对象
 xingchen =Student()
@@ -24,9 +35,23 @@ class PythonStudent():
 
         # 推荐在函数末尾使用return
         return None
+#基类，人
+class Peraon():
+    name = None
+    age = 18
+    gander = "man"
+    def sleep(self):
+        pass
 
+class Teacher(Peraon):
+    pass
 # 实例化一个叫yueyue的学生
 yueyue = PythonStudent()
 print(yueyue.name)
 print(yueyue.age)
 yueyue.doHomework()
+print(PythonStudent.__dict__)
+xingchen.say()
+Student().say()
+print(Student.__dict__)
+print(Teacher.__dict__)
