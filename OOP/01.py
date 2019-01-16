@@ -13,9 +13,32 @@ class Student():
         print("My name is {0}".format(self.name))
         print("My age is {0}".format(self.age))
         return None
-    def sayAgain():
+    def sayAgain(self):
         print("{0}".format(__class__.name))
 
+
+class Animel():
+    def __init__(self):
+        print("I am a Animel")
+
+
+
+class PaxingAni(Animel):
+    def __init__(self,name):
+        print("I am a PaxingAni {0}".format(name))
+
+
+
+
+class Dog(PaxingAni):
+    # _init_就是构造函数
+    # 每次实例化的时候，第一个被调用
+    # 因为主要工作是进行初始化，所以得名
+    def __init__(self):
+        print("I am init in dog")
+
+class Cat(PaxingAni):
+    pass
 
 # 实例化一个对象
 xingchen =Student()
@@ -55,3 +78,5 @@ xingchen.say()
 Student().say()
 print(Student.__dict__)
 print(Teacher.__dict__)
+D = Dog()
+C = Cat("cat")
