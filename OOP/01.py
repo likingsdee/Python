@@ -15,7 +15,8 @@ class Student():
         return None
     def sayAgain(self):
         print("{0}".format(__class__.name))
-
+    def __getattr__(self, item):
+        print("{0}属性未找到".format(item))
 
 class Animel():
     def __init__(self):
@@ -63,6 +64,9 @@ class Peraon():
     name = None
     age = 18
     gander = "man"
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
     def sleep(self):
         pass
 
@@ -80,3 +84,4 @@ print(Student.__dict__)
 print(Teacher.__dict__)
 D = Dog()
 C = Cat("cat")
+print(xingchen.addr)
